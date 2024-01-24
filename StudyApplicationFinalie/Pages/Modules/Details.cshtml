@@ -1,0 +1,73 @@
+﻿@page
+@model StudyApplicationFinalie.Pages.Modules.DetailsModel
+
+@{
+    ViewData["Title"] = "Module";
+}
+
+<h1> Module in-depth Details</h1>
+
+<div>
+    <h4>Module</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.Credits)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.Credits)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.Classhours)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.Classhours)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.Selfhours)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.Selfhours)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.Weeks)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.Weeks)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.StartDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.StartDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.CurrentDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.CurrentDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.Enteredhours)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.Enteredhours)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.HoursRemaining)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.HoursRemaining)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.EnterModules?.ModuleCode">Enter Hours</a> |
+    <a asp-page="./Index">Display Modules</a>
+</div>

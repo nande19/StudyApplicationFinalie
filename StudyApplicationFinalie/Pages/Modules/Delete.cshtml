@@ -1,0 +1,76 @@
+﻿@page
+@model StudyApplicationFinalie.Pages.Modules.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>EnterModules</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.Credits)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.Credits)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.Classhours)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.Classhours)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.Selfhours)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.Selfhours)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.Weeks)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.Weeks)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.StartDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.StartDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.CurrentDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.CurrentDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.Enteredhours)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.Enteredhours)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnterModules.HoursRemaining)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EnterModules.HoursRemaining)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="EnterModules.ModuleCode" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

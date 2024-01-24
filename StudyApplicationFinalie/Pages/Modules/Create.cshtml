@@ -1,0 +1,60 @@
+﻿@page
+@model StudyApplicationFinalie.Pages.Modules.CreateModel
+
+@{
+    ViewData["Title"] = "Enter Modules";
+}
+
+<h1>Enter Modules</h1>
+
+<h4>Enter the modules you are studying</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EnterModules.ModuleCode" class="control-label"></label>
+                <input asp-for="EnterModules.ModuleCode" class="form-control" />
+                <span asp-validation-for="EnterModules.ModuleCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EnterModules.Name" class="control-label"></label>
+                <input asp-for="EnterModules.Name" class="form-control" />
+                <span asp-validation-for="EnterModules.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EnterModules.Credits" class="control-label"></label>
+                <input asp-for="EnterModules.Credits" class="form-control" />
+                <span asp-validation-for="EnterModules.Credits" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EnterModules.Classhours" class="control-label"></label>
+                <input asp-for="EnterModules.Classhours" class="form-control" />
+                <span asp-validation-for="EnterModules.Classhours" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EnterModules.Weeks" class="control-label"></label>
+                <input asp-for="EnterModules.Weeks" class="form-control" />
+                <span asp-validation-for="EnterModules.Weeks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EnterModules.StartDate" class="control-label"></label>
+                <input asp-for="EnterModules.StartDate" class="form-control" />
+                <span asp-validation-for="EnterModules.StartDate" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Display Modules</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

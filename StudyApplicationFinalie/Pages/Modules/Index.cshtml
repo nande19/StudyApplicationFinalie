@@ -1,0 +1,82 @@
+﻿@page
+@model StudyApplicationFinalie.Pages.Modules.IndexModel
+
+@{
+    ViewData["Title"] = "Display";
+}
+
+<h1> Modules Display</h1>
+<h4>Enter a Module to Enter Hours</h4>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EnterModules[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnterModules[0].Credits)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnterModules[0].Classhours)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnterModules[0].Selfhours)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnterModules[0].Weeks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnterModules[0].StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnterModules[0].CurrentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnterModules[0].Enteredhours)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnterModules[0].HoursRemaining)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.EnterModules) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Credits)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Classhours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Selfhours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weeks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Enteredhours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoursRemaining)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ModuleCode">Enter Hours</a> |
+                <a asp-page="./Details" asp-route-id="@item.ModuleCode">Display in Depth</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ModuleCode">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
